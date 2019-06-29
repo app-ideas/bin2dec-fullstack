@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 class BinaryTextBox extends React.Component {
   constructor(props) {
     super(props);
@@ -8,7 +8,7 @@ class BinaryTextBox extends React.Component {
   }
   
   handleChange(evt) {
-    if(evt.target.value!=''){
+    if(evt.target.value!==''){
     const binaryNumber = (evt.target.validity.valid) ? evt.target.value : this.state.binaryNumber;
     console.log(binaryNumber);
     this.setState({ binaryNumber });
@@ -22,7 +22,7 @@ class BinaryTextBox extends React.Component {
   }
   handleFormChange(attr, event){
     console.log(attr, (event.target.validity.valid) ? event.target.value : this.state.binaryNumber)
-    if(event.target.value!=''){
+    if(event.target.value!==''){
     this.setState({
      [attr]: (event.target.validity.valid) ? event.target.value : this.state.binaryNumber
     });

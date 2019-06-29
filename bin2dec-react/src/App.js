@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Container, Row, Col,Form,Button,Jumbotron } from 'react-bootstrap'
+import { Container,Col,Form,Button,Jumbotron } from 'react-bootstrap'
 import BinaryTextBox from './Components/BinaryTextBox'
 import Header from './Components/Header'
 class App extends Component {
@@ -25,7 +25,7 @@ class App extends Component {
     }
 
     this.setState({ validated: true });
-    if(this.state.binarytext != ''){
+    if(this.state.binarytext !== ''){
       this.convert_to_dec_using_api();
     }
     else{
