@@ -1,4 +1,4 @@
-icon: https://apps.okteto.com/movies/icon.png
+icon: https://avatars2.githubusercontent.com/u/49730271?s=400&u=05930177a75f696365e3d20564782356e7ef671a&v=4
 deploy:
   - okteto build -t okteto.dev/bin2dec-api:${OKTETO_GIT_COMMIT} bin2dec-api
   - okteto build -t okteto.dev/bin2dec-react:${OKTETO_GIT_COMMIT} bin2dec-react
