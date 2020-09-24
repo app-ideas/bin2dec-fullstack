@@ -1,7 +1,7 @@
 icon: https://apps.okteto.com/movies/icon.png
 deploy:
-  - okteto build -t okteto.dev/bin2dec-api:${OKTETO_GIT_COMMIT} api
-  - okteto build -t okteto.dev/bin2dec-react:${OKTETO_GIT_COMMIT} frontend
+  - okteto build -t okteto.dev/bin2dec-api:${OKTETO_GIT_COMMIT} bin2dec-api
+  - okteto build -t okteto.dev/bin2dec-react:${OKTETO_GIT_COMMIT} bin2dec-react
 devs:
-  - api/okteto.yml
-  - frontend/okteto.yml
+  - bin2dec-api/okteto.yml
+  - bin2dec-react/okteto.yml
