@@ -6,8 +6,8 @@ COPY package.json ./
 RUN npm install
 COPY . .
 
-RUN yarn build
+RUN npm run build
 
 FROM nginx:alpine 
-COPY --from=dev /src/dist /usr/share/nginx/html
+COPY --from=dev /build /usr/share/nginx/html
 EXPOSE 80
