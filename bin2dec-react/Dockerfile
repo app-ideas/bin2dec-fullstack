@@ -2,8 +2,8 @@ FROM node:10 as dev
 
 WORKDIR /src
 
-COPY package.json yarn.lock ./
-RUN yarn install
+COPY package.json ./
+RUN npm install
 COPY . .
 
 RUN yarn build
