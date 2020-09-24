@@ -2,8 +2,8 @@ FROM node:10
 
 WORKDIR /src
 
-COPY package.json yarn.lock ./
-RUN yarn install
+COPY package.json ./
+RUN npm install
 
 COPY . .
-CMD ["yarn", "start"]
+CMD ["npm", "start"]
