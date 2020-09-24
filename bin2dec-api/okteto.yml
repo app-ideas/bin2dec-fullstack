@@ -1,0 +1,11 @@
+name: api
+labels:
+  app.kubernetes.io/component: api
+image: okteto/bin2dec-api
+workdir: /src
+command: ["bash"]
+forward:
+  - 8080:8080
+  - 9229:9229
+persistentVolume:
+  enabled: false
