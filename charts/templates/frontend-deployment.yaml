@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: bin2dec-react
   labels:
     {{- include "bin2dec.labels" . | nindent 4 }}
-    app.kubernetes.io/component: frontend
+    app.kubernetes.io/component: bin2dec-react
 spec:
   replicas: {{ .Values.frontend.replicaCount }}
   selector:
     matchLabels:
-      app.kubernetes.io/name: frontend
+      app.kubernetes.io/name: bin2dec-react
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: frontend
+        app.kubernetes.io/name: bin2dec-react
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
       terminationGracePeriodSeconds: 0
       containers:
-        - name: frontend
+        - name: bin2dec-react
           image: {{ .Values.frontend.image }}:{{ .Values.tag }}
           ports:
             - name: http

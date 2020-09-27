@@ -12,9 +12,9 @@ spec:
         paths:
           - path: /api
             backend:
-              serviceName: api
+              serviceName: bin2dec-api
               servicePort: 8080
           - path: /
             backend:
-              serviceName: frontend
+              serviceName: bin2dec-react
               servicePort: 80
