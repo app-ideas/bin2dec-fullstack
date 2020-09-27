@@ -14,6 +14,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(logger("dev"));
 
+router.get("/healthz", (req, res) => {
+  res.sendStatus(200)
+  return;
+});
 // this is our get method
 // this method fetches all available data in our database
 router.get("/converttodec", (req, res) => {
