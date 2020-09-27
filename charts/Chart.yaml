@@ -1,7 +1,7 @@
 apiVersion: v2
-name: movies
+name: bin2dec
 description: A Node + React application in Kubernetes
 type: application
 version: 0.1.0
 appVersion: 1.0.0
-icon: https://apps.okteto.com/movies/icon.png
+icon: https://avatars2.githubusercontent.com/u/49730271?s=400&u=05930177a75f696365e3d20564782356e7ef671a&v=4
