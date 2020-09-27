@@ -2,8 +2,9 @@ tag: dev
 
 api:
   replicaCount: 1
-  image: okteto.dev/api
+  image: okteto.dev/bin2dec-api
 
 frontend:
   replicaCount: 1
-  image: okteto.dev/frontend
+  image: okteto.dev/bin2dec-react
+  
